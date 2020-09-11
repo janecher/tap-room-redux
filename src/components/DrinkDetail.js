@@ -17,10 +17,10 @@ function DrinkDetail(props){
       <p>Price: ${drink.price}</p>
       <p>Pints left: {drink.pints}</p>
       <p style={messageStyles}>{message}</p>
-      <button onClick={() => onClickingSell(drink.id)}>Sell</button>
-      <button onClick={() => onClickingRestock(drink.id)}>Restock</button>
-      <button onClick={() => onClickingEdit()}>Update</button>
-      <button onClick={() => onClickingDelete(drink.id) }>Delete</button>
+      <button onClick={() => onClickingSell(drink.id)} className="btn btn-primary">Sell</button>
+      <button onClick={() => onClickingRestock(drink.id)} className="btn btn-primary">Restock</button>
+      <button onClick={() => onClickingEdit()} className="btn btn-primary">Update</button>
+      <button onClick={() => onClickingDelete(drink.id)} className="btn btn-primary">Delete</button>
       <hr/>
     </React.Fragment>
   );

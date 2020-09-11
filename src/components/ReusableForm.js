@@ -5,27 +5,35 @@ function ReusableForm(props) {
   return (
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
-        <label>Name</label>
-        <input
-          type='text'
-          name='name'
-        />
-        <label>Brand</label>
-        <input
-          type='text'
-          name='brand'
-        />
-        <label>Flavor</label>
-        <input
-          type='text'
-          name='flavor'
-        />
-        <label>Price</label>
-        <input
-          type='text'
-          name='price'
-        />
-        <button type='submit'>{props.buttonText}</button>
+        <div className ="form-group">
+          <label>Name</label>
+          <input className="form-control"
+            type='text'
+            name='name'
+          />
+        </div>
+        <div className="form-group">
+          <label>Brand</label>
+          <input className="form-control"
+            type='text'
+            name='brand'
+          />
+        </div>
+        <div className="form-group">
+          <label>Flavor</label>
+          <input className="form-control"
+            type='text'
+            name='flavor'
+          />
+        </div>
+        <div className="form-group">
+          <label>Price</label>
+          <input className="form-control"
+            type='text'
+            name='price'
+          />
+        </div>
+        <button type='submit' className="btn btn-primary">{props.buttonText}</button>
       </form>
     </React.Fragment>
   );
