@@ -11,7 +11,7 @@ function DrinkDetail(props){
 
   return (
     <React.Fragment>
-      <h3>{drink.name}</h3>
+      <h3 className="drink-name">{drink.name}</h3>
       <p>Brand: {drink.brand}</p>
       <p>Flavor: {drink.flavor}</p>
       <p>Price: <span className = "price">${drink.price}</span></p>

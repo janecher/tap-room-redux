@@ -25,3 +25,7 @@ code {
   color: #00008B;
   font-size: 20px;
 }
+
+.drink-name {
+  font-weight: bold;
+}
