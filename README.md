@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tap Room
 
-## Available Scripts
+#### React.js application, 09/11/2020
 
-In the project directory, you can run:
+#### By _**Evgeniya Chernaya**_
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Tap room is a React application where a bar store (user) can track their drink kegs.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Setup/Installation Requirements
 
-### `npm test`
+* Clone the repository to your desired directory (git clone https://github.com/janecher/tap-room.git)
+* Do "npm install", then "npm run build" in the terminal
+* Do "npm run start" in the terminal to see the result in browser
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Specification
 
-### `npm run build`
+<img src="README-images/component-tree.png"/><br>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- User can see a list of all available products (DrinkDetail component). For each product user can see name, brand, flavor, price.
+- User can submit a form to add a new product to a list (Click Add Drink button, fill the form om NewDrinkForm component).
+- User is able to click on a product to see its detail page.
+- User can see how many pints are left in a keg (full keg has 124 pints).
+- User is able to click a button "Sell" on product detail page (to decrease the number of pints left by 1). Pints should not be able to go below 0.
+- Message "Almost Empty" appears on product detail page if keg has less than 10 pints, and "Out of Stock" once it's empty.
+- User is able to click a button "Restock" on product detail page (to increase the number of pints to the full keg = 124 pints).
+- User can edit a products's properties (EditDrinkForm component).
+- User is able to delete a produst.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Known Bugs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_No known bags_
 
-### `npm run eject`
+## Support and contact details
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Contact me at _evgenya.chernaya@gmail.com_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  * React
+  * JavaScript
+  * JSX
+  * HTML
+  * CSS
+  * Bootstrap
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### License
 
-## Learn More
+_This software is licensed under the MIT license_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2020 **Evgeniya Chernaya**
