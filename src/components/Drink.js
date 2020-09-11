@@ -8,7 +8,7 @@ function Drink(props){
         <h3>{props.name}</h3>
         <p>Brand: {props.brand}</p>
         <p>Flavor: {props.flavor}</p>
-        <p>Price: ${props.price}</p>
+        <p>Price: <span className = "price">${props.price}</span></p>
         <p>Pints left: {props.pints}</p>
         <hr/>
       </div>

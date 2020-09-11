@@ -14,7 +14,7 @@ function DrinkDetail(props){
       <h3>{drink.name}</h3>
       <p>Brand: {drink.brand}</p>
       <p>Flavor: {drink.flavor}</p>
-      <p>Price: ${drink.price}</p>
+      <p>Price: <span className = "price">${drink.price}</span></p>
       <p>Pints left: {drink.pints}</p>
       <p style={messageStyles}>{message}</p>
       <button onClick={() => onClickingSell(drink.id)} className="btn btn-primary">Sell</button>

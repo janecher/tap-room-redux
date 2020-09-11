@@ -74,8 +74,7 @@ class BarControl extends React.Component {
       .concat(drinkToSell);
     this.setState({
         bookList: editedDrinkList,
-        editing: false,
-        selectedDrink: null
+        editing: false
       });
   }
 
@@ -87,8 +86,7 @@ class BarControl extends React.Component {
       .concat(drinkToRestock);
     this.setState({
         bookList: editedDrinkList,
-        editing: false,
-        selectedDrink: null
+        editing: false
       });
   }
 
