@@ -2,16 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function DrinkDetail(props){
-  const { drink, onClickingDelete, onClickingEdit, onClickingBuy, onClickingRestock} = props;
+  const messageStyles = {
+    color: 'orange',
+    fontWeight: 'bold'
+  }
+
+  const { drink, onClickingDelete, onClickingEdit, onClickingSell, onClickingRestock, message} = props;
 
   return (
     <React.Fragment>
       <h3>{drink.name}</h3>
-      <p>{drink.brand}</p>
-      <p>$ {drink.price}</p>
-      <p>{drink.flavor}</p>
+      <p>Brand: {drink.brand}</p>
+      <p>Flavor: {drink.flavor}</p>
+      <p>Price: ${drink.price}</p>
       <p>Pints left: {drink.pints}</p>
-      <button onClick={() => onClickingBuy(drink.id)}>Buy</button>
+      <p style={messageStyles}>{message}</p>
+      <button onClick={() => onClickingSell(drink.id)}>Sell</button>
       <button onClick={() => onClickingRestock(drink.id)}>Restock</button>
       <button onClick={() => onClickingEdit()}>Update</button>
       <button onClick={() => onClickingDelete(drink.id) }>Delete</button>
@@ -24,7 +30,8 @@ DrinkDetail.propTypes = {
   drink: PropTypes.object,
   onClickingDelete: PropTypes.func,
   onClickingEdit: PropTypes.func,
-  onClickingBuy: PropTypes.func
+  onClickingSell: PropTypes.func,
+  onClickingRestock: PropTypes.func
 };
 
 export default DrinkDetail;
