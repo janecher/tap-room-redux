@@ -21,11 +21,17 @@ code {
   margin: 3px;
 }
 
-.price {
+.price{
+  font-weight: bold;
+}
+
+.price-detail {
   color: #00008B;
   font-size: 20px;
 }
 
 .drink-name {
   font-weight: bold;
+  font-size: 30px;
+  color: #00008B;
 }

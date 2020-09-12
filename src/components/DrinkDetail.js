@@ -11,10 +11,11 @@ function DrinkDetail(props){
 
   return (
     <React.Fragment>
+      <hr />
       <h3 className="drink-name">{drink.name}</h3>
       <p>Brand: {drink.brand}</p>
       <p>Flavor: {drink.flavor}</p>
-      <p>Price: <span className = "price">${drink.price}</span></p>
+      <p>Price: <span className = "price-detail">${drink.price}</span></p>
       <p>Pints left: {drink.pints}</p>
       <p style={messageStyles}>{message}</p>
       <button onClick={() => onClickingSell(drink.id)} className="btn btn-primary">Sell</button>
