@@ -9,8 +9,16 @@ describe('editingReducer', () => {
 	test('Should editing state to true', () => {
 		expect(
 			editingReducer(false, {
-				type: c.EDITING_FORM
+				type: c.EDITING_FORM_TRUE
 			})
 		).toEqual(true);
+  });
+  
+  test('Should editing state to false', () => {
+		expect(
+			editingReducer(false, {
+				type: c.EDITING_FORM_FALSE
+			})
+		).toEqual(false);
 	});
 });

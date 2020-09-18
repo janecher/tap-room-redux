@@ -3,4 +3,5 @@ export const SELECT_DRINK = 'SELECT_DRINK';
 export const SELECT_DRINK_NULL = 'SELECT_DRINK_NULL';
 export const DELETE_DRINK = 'DELETE_DRINK';
 export const ADD_DRINK = 'ADD_DRINK';
-export const EDITING_FORM = 'EDITING_FORM';
+export const EDITING_FORM_TRUE = 'EDITING_FORM_TRUE';
+export const EDITING_FORM_FALSE = 'EDITING_FORM_FALSE';

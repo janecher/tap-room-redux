@@ -4,8 +4,12 @@ export const toggleForm = () => ({
 	type: c.TOGGLE_FORM
 });
 
-export const editing = () => ({
-	type: c.EDITING_FORM
+export const editingTrue = () => ({
+	type: c.EDITING_FORM_TRUE
+});
+
+export const editingFalse = () => ({
+	type: c.EDITING_FORM_FALSE
 });
 
 export const selectDrink = (drink) => {

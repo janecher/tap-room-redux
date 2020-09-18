@@ -2,16 +2,25 @@ import * as c from '../../actions/ActionTypes';
 import * as actions from './../../actions/index.js';
 
 describe('animal forum actions', () => {
+
 	it('toggleForm should create TOGGLE_FORM action', () => {
 		expect(actions.toggleForm()).toEqual({
 			type: c.TOGGLE_FORM
 		});
   });
-  it('editing should create EDITING_FORM action', () => {
-		expect(actions.editing()).toEqual({
-			type: c.EDITING_FORM
+
+  it('editing should create EDITING_FORM_TRUE action', () => {
+		expect(actions.editingTrue()).toEqual({
+			type: c.EDITING_FORM_TRUE
 		});
   });
+
+  it('editing should create EDITING_FORM_FALSE action', () => {
+		expect(actions.editingFalse()).toEqual({
+			type: c.EDITING_FORM_FALSE
+		});
+  });
+
   it('selectDrink should create SELECT_DRINK action', () => {
 		expect(
 			actions.selectDrink({

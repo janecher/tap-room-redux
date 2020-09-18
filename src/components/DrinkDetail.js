@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { connect } from 'react-redux';
 
 function DrinkDetail(props){
   const messageStyles = {
@@ -7,16 +8,16 @@ function DrinkDetail(props){
     fontWeight: 'bold'
   }
 
-  const { drink, onClickingDelete, onClickingEdit, onClickingSell, onClickingRestock, message} = props;
+  const { drink, onClickingDelete, onClickingEdit, onClickingSell, onClickingRestock, message, pints} = props;
 
   return (
     <React.Fragment>
       <hr />
       <h3 className="drink-name">{drink.name}</h3>
-      <p>Brand: {drink.brand}</p>
-      <p>Flavor: {drink.flavor}</p>
-      <p>Price: <span className = "price-detail">${drink.price}</span></p>
-      <p>Pints left: {drink.pints}</p>
+      <p>Brand: {Object.values(drink)[0].brand}</p>
+      <p>Flavor: {Object.values(drink)[0].flavor}</p>
+      <p>Price: <span className = "price-detail">${Object.values(drink)[0].price}</span></p>
+      <p>Pints left: {pints}</p>
       <p style={messageStyles}>{message}</p>
       <button onClick={() => onClickingSell(drink.id)} className="btn btn-primary">Sell</button>
       <button onClick={() => onClickingRestock(drink.id)} className="btn btn-primary">Restock</button>
@@ -27,6 +28,12 @@ function DrinkDetail(props){
   );
 }
 
+const mapStateToProps = (state, props) => {
+	return {
+		pints: state.drinkList[Object.values(props.drink)[0].id].pints
+	}
+}
+
 DrinkDetail.propTypes = {
   drink: PropTypes.object,
   onClickingDelete: PropTypes.func,
@@ -35,4 +42,4 @@ DrinkDetail.propTypes = {
   onClickingRestock: PropTypes.func
 };
 
-export default DrinkDetail;
+export default connect(mapStateToProps)(DrinkDetail);
