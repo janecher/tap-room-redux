@@ -8,21 +8,22 @@ function DrinkDetail(props){
     fontWeight: 'bold'
   }
 
-  const { drink, onClickingDelete, onClickingEdit, onClickingSell, onClickingRestock, message, pints} = props;
+  const { drink, onClickingDelete, onClickingEdit, onClickingSell, onClickingRestock, message, pints, brand, flavor, name, price} = props;
 
   return (
     <React.Fragment>
       <hr />
-      <h3 className="drink-name">{drink.name}</h3>
-      <p>Brand: {Object.values(drink)[0].brand}</p>
-      <p>Flavor: {Object.values(drink)[0].flavor}</p>
-      <p>Price: <span className = "price-detail">${Object.values(drink)[0].price}</span></p>
+      <h3 className="drink-name">{name}</h3>
+      <p>Brand: {brand}</p>
+      <p>Flavor: {flavor}</p>
+      <p>Price: <span className = "price-detail">${price}</span></p>
       <p>Pints left: {pints}</p>
       <p style={messageStyles}>{message}</p>
-      <button onClick={() => onClickingSell(drink.id)} className="btn btn-primary">Sell</button>
-      <button onClick={() => onClickingRestock(drink.id)} className="btn btn-primary">Restock</button>
+      {console.log(message)}
+      <button onClick={() => onClickingSell(Object.values(drink)[0].id)} className="btn btn-primary">Sell</button>
+      <button onClick={() => onClickingRestock(Object.values(drink)[0].id)} className="btn btn-primary">Restock</button>
       <button onClick={() => onClickingEdit()} className="btn btn-primary">Update</button>
-      <button onClick={() => onClickingDelete(drink.id)} className="btn btn-primary">Delete</button>
+      <button onClick={() => onClickingDelete(Object.values(drink)[0].id)} className="btn btn-primary">Delete</button>
       <hr/>
     </React.Fragment>
   );
@@ -30,7 +31,12 @@ function DrinkDetail(props){
 
 const mapStateToProps = (state, props) => {
 	return {
-		pints: state.drinkList[Object.values(props.drink)[0].id].pints
+    pints: state.drinkList[Object.values(props.drink)[0].id].pints,
+    name: state.drinkList[Object.values(props.drink)[0].id].name,
+    brand: state.drinkList[Object.values(props.drink)[0].id].brand,
+    flavor: state.drinkList[Object.values(props.drink)[0].id].flavor,
+    price: state.drinkList[Object.values(props.drink)[0].id].price,
+    message: props.message
 	}
 }
 

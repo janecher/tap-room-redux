@@ -17,7 +17,8 @@ function DrinkList(props){
             flavor = {drink.flavor}
             pints = {parseInt(drink.pints)}
             id={drink.id}
-            key={drink.id}/>
+            key={drink.id}
+          />
         );
       })}
     </React.Fragment>

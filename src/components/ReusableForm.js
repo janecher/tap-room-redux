@@ -7,9 +7,10 @@ function ReusableForm(props) {
       <form onSubmit={props.formSubmissionHandler}>
         <div className ="form-group">
           <label>Name</label>
-          <input className="form-control"
+          <input className="form-control" 
             type='text'
             name='name'
+            required
           />
         </div>
         <div className="form-group">
@@ -17,6 +18,7 @@ function ReusableForm(props) {
           <input className="form-control"
             type='text'
             name='brand'
+            required
           />
         </div>
         <div className="form-group">
@@ -24,6 +26,7 @@ function ReusableForm(props) {
           <input className="form-control"
             type='text'
             name='flavor'
+            required
           />
         </div>
         <div className="form-group">
@@ -31,6 +34,7 @@ function ReusableForm(props) {
           <input className="form-control"
             type='text'
             name='price'
+            required
           />
         </div>
         <button type='submit' className="btn btn-primary">{props.buttonText}</button>

@@ -44,7 +44,7 @@ class BarControl extends React.Component {
 
   handleDeletingDrink = (id) => {
     const { dispatch } = this.props;
-		const action = a.addDrink(id);
+		const action = a.deleteDrink(id);
     dispatch(action);
     const action2 = a.selectDrinkToNull();
 		dispatch(action2);
@@ -71,7 +71,7 @@ class BarControl extends React.Component {
     console.log(drinkToSell);
     if(drinkToSell.pints > 0) {
       const { dispatch } = this.props;
-      const removeOnePint = drinkToSell.pints - 1;
+      const removeOnePint = drinkToSell.pints - 20;
       drinkToSell.pints = removeOnePint;
       const action = a.addDrink(drinkToSell);
       dispatch(action);
@@ -103,7 +103,7 @@ class BarControl extends React.Component {
                                 onEditDrink = {this.handleEditingDrinkInList} />
       buttonText = "Return to Drink List";
     } else if (this.props.selectedDrink != null) {
-      let message = null;
+      let message = "";
       if(this.props.selectedDrink.pints < 10 && this.props.selectedDrink.pints > 0) {
         message = "Almost Empty";
       } else if (this.props.selectedDrink.pints < 1) {

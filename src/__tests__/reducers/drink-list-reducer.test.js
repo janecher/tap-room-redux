@@ -61,6 +61,32 @@ describe('drinkListReducer', () => {
 			},
 		});
   });
+
+  test('Should successfully edit drink data to drinkList', () => {
+		action = {
+			type: c.ADD_DRINK,
+			name : "EditName",
+      brand : "EditBrand",
+      flavor : "flavor",
+      price : "price",
+      pints : 124,
+      id: 1
+		};
+		expect(drinkListReducer(currentState, action)).toEqual({
+      1: {name : "EditName",
+      brand : "EditBrand",
+      flavor : "flavor",
+      price : "price",
+      pints : 124,
+      id: 1},
+      2: {name : "Sprite",
+      brand : "Coca-cola",
+      flavor : "lemon",
+      price : "3",
+      pints : 124,
+      id: 2}
+		});
+  });
   
   test('Should successfully delete a drink', () => {
     action = {
