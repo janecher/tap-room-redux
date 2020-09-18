@@ -62,24 +62,17 @@ class BarControl extends React.Component {
 		dispatch(action);
 		const action2 = a.editingFalse();
     dispatch(action2);
-    // const action3 = a.selectDrinkToNull();
-		// dispatch(action3);
   }
 
   handleDrinkSellClick = (drinkId) => {
     const drinkToSell = this.props.drinkList[drinkId];
-    console.log(drinkToSell);
     if(drinkToSell.pints > 0) {
       const { dispatch } = this.props;
-      const removeOnePint = drinkToSell.pints - 20;
+      const removeOnePint = drinkToSell.pints - 1;
       drinkToSell.pints = removeOnePint;
       const action = a.addDrink(drinkToSell);
       dispatch(action);
     }
-    // this.setState({
-    //     bookList: editedDrinkList,
-    //     editing: false
-    //   });
   }
 
   handleDrinkRestockClick = (drinkId) => {
@@ -88,10 +81,6 @@ class BarControl extends React.Component {
     drinkToRestock.pints = 124;
     const action = a.addDrink(drinkToRestock);
     dispatch(action);
-    // this.setState({
-    //     bookList: editedDrinkList,
-    //     editing: false
-    //   });
   }
 
   render(){
@@ -103,15 +92,8 @@ class BarControl extends React.Component {
                                 onEditDrink = {this.handleEditingDrinkInList} />
       buttonText = "Return to Drink List";
     } else if (this.props.selectedDrink != null) {
-      let message = "";
-      if(this.props.selectedDrink.pints < 10 && this.props.selectedDrink.pints > 0) {
-        message = "Almost Empty";
-      } else if (this.props.selectedDrink.pints < 1) {
-        message = "Out of Stock";
-      }
       currentlyVisibleState = <DrinkDetail 
                                 drink = {this.props.selectedDrink}
-                                message = {message} 
                                 onClickingDelete = {this.handleDeletingDrink} 
                                 onClickingEdit = {this.handleEditClick} 
                                 onClickingSell = {this.handleDrinkSellClick} 
@@ -148,7 +130,6 @@ BarControl.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
 	return {
 		drinkList: state.drinkList,
 		formVisibleOnPage: state.formVisibleOnPage,
