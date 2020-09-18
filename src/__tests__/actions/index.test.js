@@ -32,4 +32,30 @@ describe('animal forum actions', () => {
 			type: c.SELECT_DRINK_NULL
 		});
   });
+  it('deleteDrink should create DELETE_DRINK action', () => {
+		expect(actions.deleteDrink(1)).toEqual({
+			type: c.DELETE_DRINK,
+			id: 1
+		});
+  });
+  it('addDrink should create ADD_DRINK action', () => {
+		expect(
+			actions.addDrink({
+				name : "Sprite",
+        brand : "Coca-cola",
+        flavor : "lemon",
+        price : "3",
+        pints : 124,
+        id: 2
+			})
+		).toEqual({
+			type: c.ADD_DRINK,
+			name : "Sprite",
+      brand : "Coca-cola",
+      flavor : "lemon",
+      price : "3",
+      pints : 124,
+      id: 2
+		});
+	});
 });

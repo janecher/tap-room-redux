@@ -27,3 +27,26 @@ export const selectDrinkToNull = () => {
 		type: c.SELECT_DRINK_NULL
 	};
 };
+
+export const addDrink = (drink) => {
+	const { name,
+		brand,
+		flavor,
+		price,
+		pints,
+		id } = drink;
+	return {
+		type: c.ADD_DRINK,
+		name : name,
+    brand : brand,
+    flavor : flavor,
+    price : price,
+    pints : pints,
+    id: id
+	};
+};
+
+export const deleteDrink = (id) => ({
+	type: c.DELETE_DRINK,
+	id
+});
