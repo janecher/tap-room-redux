@@ -1,12 +1,13 @@
-# Tap Room
+# Tap Room Redux
 
-#### React.js application, 09/11/2020
+#### React Redux application, 09/18/2020
 
 #### By _**Evgeniya Chernaya**_
 
 ## Description
 
-Tap room is a React application where a bar store (user) can track their drink kegs.
+Tap Room Redux is a React Redux application where a bar store (user) can track their drink kegs.
+Practice of working with Redux, creating reduces, actions, and testing these functionalities in Jest.
 
 ## Setup/Installation Requirements
 
@@ -23,10 +24,9 @@ Tap room is a React application where a bar store (user) can track their drink k
 - User is able to click on a product to see its detail page.
 - User can see how many pints are left in a keg (full keg has 124 pints).
 - User is able to click a button "Sell" on product detail page (to decrease the number of pints left by 1). Pints should not be able to go below 0.
-- Message "Almost Empty" appears on product detail page if keg has less than 10 pints, and "Out of Stock" once it's empty.
 - User is able to click a button "Restock" on product detail page (to increase the number of pints to the full keg = 124 pints).
 - User can edit a products's properties (EditDrinkForm component).
-- User is able to delete a produst.
+- User is able to delete a product.
 
 ## Known Bugs
 
@@ -39,6 +39,7 @@ Contact me at _evgenya.chernaya@gmail.com_
 ## Technologies Used
 
   * React
+  * Redux
   * JavaScript
   * JSX
   * HTML
