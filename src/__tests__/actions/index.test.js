@@ -7,6 +7,11 @@ describe('animal forum actions', () => {
 			type: c.TOGGLE_FORM
 		});
   });
+  it('editing should create EDITING_FORM action', () => {
+		expect(actions.editing()).toEqual({
+			type: c.EDITING_FORM
+		});
+  });
   it('selectDrink should create SELECT_DRINK action', () => {
 		expect(
 			actions.selectDrink({
