@@ -115,8 +115,8 @@ class BarControl extends React.Component {
     }
     return (
       <React.Fragment>
+        <button onClick={this.handleClick} className="btn btn-primary">{buttonText}</button>
         {currentlyVisibleState}
-        <button onClick={this.handleClick} className="btn btn-primary">{buttonText}</button> 
       </React.Fragment>
     );
   }
