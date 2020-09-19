@@ -4,13 +4,15 @@ import PropTypes from "prop-types";
 function Drink(props){
   return (
     <React.Fragment>
-      <div onClick = {() => props.whenDrinkClicked(props.id)}>
-        <h3>{props.name}</h3>
-        <p>Brand: {props.brand}</p>
-        <p>Flavor: {props.flavor}</p>
-        <p>Price: <span className = "price">${props.price}</span></p>
-        <p>Pints left: {props.pints}</p>
-        <hr/>
+      <div className="panel panel-success">
+        <div className="panel-body">
+          <h3>{props.name}</h3>
+          <p>Brand: {props.brand}</p>
+          <p>Flavor: {props.flavor}</p>
+          <p>Price: <span className = "price">${props.price}</span></p>
+          <p>Pints left: {props.pints}</p>
+          <button onClick={() => props.whenDrinkClicked(props.id)} className="btn btn-secondary">Drink details</button>
+        </div>
       </div>
     </React.Fragment>
   );

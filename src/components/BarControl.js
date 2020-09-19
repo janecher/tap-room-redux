@@ -104,18 +104,14 @@ class BarControl extends React.Component {
       currentlyVisibleState = <NewDrinkForm onNewDrinkCreation={this.handleAddingNewDrinkToList} />;
       buttonText = "Return to Drink List";
     } else {
-      if(this.props.drinkList === {}) {
-        currentlyVisibleState = <p className="no-drinks">No drinks available</p>
-      } else {
-        currentlyVisibleState = <DrinkList 
-                                  drinkList={this.props.drinkList} 
-                                  onDrinkSelection={this.handleChangingSelectedDrink} />;
-      }
+      currentlyVisibleState = <DrinkList 
+                                drinkList={this.props.drinkList} 
+                                onDrinkSelection={this.handleChangingSelectedDrink} />;
       buttonText = "Add Drink";
     }
     return (
       <React.Fragment>
-        <button onClick={this.handleClick} className="btn btn-primary">{buttonText}</button>
+        <button onClick={this.handleClick} className="btn btn-secondary btn-lg btn-block">{buttonText}</button>
         {currentlyVisibleState}
       </React.Fragment>
     );

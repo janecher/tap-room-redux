@@ -5,24 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body::after {
-  content: "";
-  background: url(./assets/images/tap.jpg) no-repeat center center fixed;
-  opacity: 0.6;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;  
-  background-size: cover;  
+  background-color: #dfecdf;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.jumbotron {
+  background-image: url(./assets/images/tap.jpg);
+  text-align: center;
+  color: white;
 }
 
 .no-drinks {
@@ -32,6 +26,13 @@ code {
 
 .btn {
   margin: 3px;
+  background-color: #8FBC8F;
+  color: black;
+  font-weight: bold;
+}
+
+.btn-bar-control {
+  font-weight: bold;
 }
 
 .price{
@@ -39,12 +40,17 @@ code {
 }
 
 .price-detail {
-  color: #00008B;
+  color: #2F4F4F;
   font-size: 20px;
 }
 
 .drink-name {
   font-weight: bold;
   font-size: 30px;
-  color: #00008B;
+  color: #2F4F4F;
+}
+
+.panel-body {
+  padding-left: 30px;
+  padding-bottom: 30px;
 }

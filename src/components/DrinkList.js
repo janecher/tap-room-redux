@@ -6,7 +6,6 @@ function DrinkList(props){
 
   return (
     <React.Fragment>
-      <hr/>
       {Object.values(props.drinkList).map((drink) => {
         return (
           <Drink

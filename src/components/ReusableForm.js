@@ -37,7 +37,7 @@ function ReusableForm(props) {
             required
           />
         </div>
-        <button type='submit' className="btn btn-primary">{props.buttonText}</button>
+        <button type='submit' className="btn btn-success btn-lg">{props.buttonText}</button>
       </form>
     </React.Fragment>
   );

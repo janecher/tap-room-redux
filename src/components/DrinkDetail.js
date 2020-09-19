@@ -7,17 +7,19 @@ function DrinkDetail(props){
 
   return (
     <React.Fragment>
-      <hr />
-      <h3 className="drink-name">{name}</h3>
-      <p>Brand: {brand}</p>
-      <p>Flavor: {flavor}</p>
-      <p>Price: <span className = "price-detail">${price}</span></p>
-      <p>Pints left: {pints}</p>
-      <button onClick={() => onClickingSell(Object.values(drink)[0].id)} className="btn btn-primary">Sell</button>
-      <button onClick={() => onClickingRestock(Object.values(drink)[0].id)} className="btn btn-primary">Restock</button>
-      <button onClick={() => onClickingEdit()} className="btn btn-primary">Update</button>
-      <button onClick={() => onClickingDelete(Object.values(drink)[0].id)} className="btn btn-primary">Delete</button>
-      <hr/>
+      <div className="panel panel-success">
+        <div className="panel-body">
+          <h3 className="drink-name">{name}</h3>
+          <p>Brand: {brand}</p>
+          <p>Flavor: {flavor}</p>
+          <p>Price: <span className = "price-detail">${price}</span></p>
+          <p>Pints left: <span className = "price-detail">{pints}</span></p>
+          <button onClick={() => onClickingSell(Object.values(drink)[0].id)} className="btn btn-secondary">Sell</button>
+          <button onClick={() => onClickingRestock(Object.values(drink)[0].id)} className="btn btn-secondary">Restock</button>
+          <button onClick={() => onClickingEdit()} className="btn btn-secondary">Update</button>
+          <button onClick={() => onClickingDelete(Object.values(drink)[0].id)} className="btn btn-secondary">Delete</button>
+        </div>
+      </div>
     </React.Fragment>
   );
 }
