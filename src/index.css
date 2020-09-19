@@ -25,14 +25,14 @@ code {
 }
 
 .btn {
-  margin: 3px;
+  margin-right: 5px;
   background-color: #8FBC8F;
   color: black;
   font-weight: bold;
 }
 
-.btn-bar-control {
-  font-weight: bold;
+.btn-block {
+  margin-bottom: 20px;
 }
 
 .price{
