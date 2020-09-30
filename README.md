@@ -9,6 +9,8 @@
 Tap Room Redux is a React Redux application where a bar store (user) can track their drink kegs.
 Practice of working with Redux, creating reduces, actions, and testing these functionalities in Jest.
 
+<img src="public/drinkList.png"/><br>
+
 ## Setup/Installation Requirements
 
 * Clone the repository to your desired directory (git clone https://github.com/janecher/tap-room.git)
@@ -17,7 +19,7 @@ Practice of working with Redux, creating reduces, actions, and testing these fun
 
 ## Specification
 
-<img src="README-images/component-tree.png"/><br>
+<img src="public/component-tree.png"/><br>
 
 - User can see a list of all available products (DrinkDetail component). For each product user can see name, brand, flavor, price.
 - User can submit a form to add a new product to a list (Click Add Drink button, fill the form om NewDrinkForm component).
@@ -27,6 +29,10 @@ Practice of working with Redux, creating reduces, actions, and testing these fun
 - User is able to click a button "Restock" on product detail page (to increase the number of pints to the full keg = 124 pints).
 - User can edit a products's properties (EditDrinkForm component).
 - User is able to delete a product.
+
+<img src="public/addDrink.png"/><br>
+
+<img src="public/drinkDetail.png"/><br>
 
 ## Known Bugs
 
